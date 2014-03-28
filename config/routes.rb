@@ -1,4 +1,9 @@
 VegMePlease::Application.routes.draw do
+
+get '/vegme' => 'vegme#index'
+
+root to: 'vegme#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

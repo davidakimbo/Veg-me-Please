@@ -19,7 +19,7 @@ development:
   encoding: unicode
   database: veg_me_please_development
   pool: 5
-  username: veg_me_please
+  username: MinMinMin
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -48,7 +48,7 @@ test:
   encoding: unicode
   database: veg_me_please_test
   pool: 5
-  username: veg_me_please
+  username: MinMinMin
   password:
 
 production:
@@ -56,5 +56,5 @@ production:
   encoding: unicode
   database: veg_me_please_production
   pool: 5
-  username: veg_me_please
+  username: MinMinMin
   password:
