@@ -1,6 +1,7 @@
 VegMePlease::Application.routes.draw do
 
 get '/recipes' => 'recipes#index'
+get '/recipes/new' => 'recipes#new'
 
 root to: 'recipes#index'
 
