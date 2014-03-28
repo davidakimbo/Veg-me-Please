@@ -1,5 +1,7 @@
 David Kim's Veg Me Please
 
 ERD:
-http://www.lucidchart.com/invitations/accept/53349446-9ffc-4add-b30f-18a50a005bed
+https://www.dropbox.com/s/1euiz3i05avcq9h/Project-%20Veg%20Me%20Please%20-%20New%20Page.png
 
+Pivotal Tracker:
+https://www.pivotaltracker.com/s/projects/1047544
