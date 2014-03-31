@@ -6,9 +6,13 @@ class RecipesController < ApplicationController
 
   def show
     #Pass the acquired params back to the recipe model for calculating!
-    binding.pry
-    @b = Recipe.recipe_search(params[:choice_simple], params[:sweet_savory], params[:preffered_veggie], params[:allergies])
 
+    @b = Recipe.recipe_search(
+      params[:choice_simple],
+      params[:sweet_savory],
+      params[:preffered_veggie],
+      params[:allergies])
+  binding.pry
   end
 
 end
