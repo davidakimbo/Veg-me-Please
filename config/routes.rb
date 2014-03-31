@@ -1,8 +1,7 @@
 VegMePlease::Application.routes.draw do
 
 get '/recipes' => 'recipes#index'
-get '/recipes/new' => 'recipes#new'
-
+get '/recipes/show' => 'recipes#show'
 root to: 'recipes#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

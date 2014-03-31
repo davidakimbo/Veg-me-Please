@@ -4,13 +4,10 @@ class RecipesController < ApplicationController
     @a = Recipe.testing_queries
   end
 
-  def new
+  def show
     #Pass the acquired params back to the recipe model for calculating!
     binding.pry
-    Recipe.recipe_search(params[:choice_simple], params[:sweet_savory], params[:preffered_veggie], params[:allergies])
-  end
-
-  def show
+    @b = Recipe.recipe_search(params[:choice_simple], params[:sweet_savory], params[:preffered_veggie], params[:allergies])
 
   end
 
