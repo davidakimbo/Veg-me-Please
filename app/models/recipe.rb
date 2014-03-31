@@ -8,10 +8,18 @@ class Recipe < ActiveRecord::Base
 
 
 
-  def self.recipe_search(params, up_the, wazoo)
+  def self.recipe_search(choice_simple, sweet_savory, preffered_veggie, allergies)
     #This is where the magic happens.
     #Once we get everything the user wants, we pass that shiz here yo!
-    @recipe = HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=9a96c9a6&_app_key=4e268421d281dd0f9ab5c56532f44642&q") #Insert user params here
+    if params[:choice_simple] == "true"
+    end
+    params[:sweet_savory]
+    params[:preffered_veggie]
+    params[:allergies]
+
+    search_parameters = []
+
+    @recipe = HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=9a96c9a6&_app_key=4e268421d281dd0f9ab5c56532f44642&q=#{params[:preffered_veggie]}") #Insert user params here
 
   end
 
@@ -21,3 +29,5 @@ class Recipe < ActiveRecord::Base
   end
 
 end
+
+ # @recipe = HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=9a96c9a6&_app_key=4e268421d281dd0f9ab5c56532f44642&q")
