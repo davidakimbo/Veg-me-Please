@@ -46,3 +46,5 @@ end
 
 # Use HTTParty
 gem 'httparty'
+
+gem 'pry-rails'

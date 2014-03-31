@@ -1,27 +1,50 @@
 <%= @a %>
 <form action="/recipes/new" method="get">
 
-  <label name="choice_simple">Want to make something simple?<br>
-    <input type="radio" name="choice_simple" value="true" checked>Yeap!</a>
-    <input type="radio" name="choice_simple" value="false">Nah</a>
+  <p>
+  <label name="choice_simple">Want to make something quick and simple?<br>
+    <input type="radio" name="choice_simple" value="true" checked>Yeap!
   </label>
-
-  <br>
-
-  <label name="">
-    <input type="">
+  <label name="choice_simple">
+    <input type="radio" name="choice_simple" value="false">Nah
   </label>
+  </p>
 
-  <br>
-
-  <label name="">
-    <input type="">
+  <p>
+  <label name="sweet_savory">Want something sweet or savory?<br>
+    <input type="radio" name="sweet_savory" value="sweet" checked>Sweet
   </label>
-  <br>
-
-  <label name="">
-    <input type="">
+  <label name="sweet_savory">
+    <input type="radio" name="sweet_savory" value="salty">Savory
   </label>
-  <br>
+  </p>
+
+  <p>
+  <label name="preferred_veggie">What veggy do you enjoy?<br>
+    <input type="text" name="preferred_veggie">
+  </label>
+  </p>
+
+  <p>
+  <label name="allergies">Have any allergies?<br>
+    <label><input type="checkbox" name="allergies" value="dairy">Dairy</label>
+    <label><input type="checkbox" name="allergies" value="egg">Egg</label>
+    <label><input type="checkbox" name="allergies" value="gluten">Gluten</label>
+    <label><input type="checkbox" name="allergies" value="wheat">Wheat</label>
+    <label><input type="checkbox" name="allergies" value="nut">Nut</label>
+    <label><input type="checkbox" name="allergies" value="seafood">Seafood</label>
+    <label><input type="checkbox" name="allergies" value="sesame">Sesame</label>
+    <label><input type="checkbox" name="allergies" value="soy">Soy</label>
+    <label><input type="checkbox" name="allergies" value="sulfite">Sulfites</label>
+    <label><input type="checkbox" name="allergies" value="treenut">Treenut</label>
+  </label>
+  </p>
+
+<!--   <p>
+  <label name="blacklist">Any veggies you're not a fan of yet?<br>
+    <input type="text" name="blacklist" placeholder="Veggie Blacklist">
+  </label>
+  </p> -->
+
 <input type="submit" name="submit" value="Now let's get Cookin'!">
 </form>

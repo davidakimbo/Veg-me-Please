@@ -6,6 +6,7 @@ class RecipesController < ApplicationController
 
   def new
     #Pass the acquired params back to the recipe model for calculating!
+    binding.pry
   end
 
 end
