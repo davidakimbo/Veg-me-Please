@@ -2,7 +2,7 @@ class Recipe < ActiveRecord::Base
 
   def self.testing_queries
     #This class method searches for onion soup recipes, returns whats in the matches hash
-    @veg_query = HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=9a96c9a6&_app_key=4e268421d281dd0f9ab5c56532f44642&q=taco")
+    @veg_query = HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=9a96c9a6&_app_key=4e268421d281dd0f9ab5c56532f44642&q=vegetarian+meatballs")
     return @veg_query["matches"][0]["ingredients"]
   end
 
@@ -24,16 +24,19 @@ class Recipe < ActiveRecord::Base
 
     if allergies
       allergies.each do |allergy|
- each_allergy = allergy.join("&allowedAllergy[]=")
-
-end
-# search_params = params[:search].split(" ").join("+")
-    else
+        allergy.values
+        # each_allergy2 = each_allergy.join("&allowedAllergy[]=")
+        puts allergy
       end
+# search_params = params[:search].split(" ").join("+")
+else
+ each_allergy = ""
+end
+binding.pry
 
-    binding.pry
 
-    @recipe = HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=9a96c9a6&_app_key=4e268421d281dd0f9ab5c56532f44642&requirePictures=true&allowedDiet[]=387&q=#{preferred_veggie}#{choice_simple}#{sweet_savory}#{each_allergy}") #Insert user params here
+    @recipe = HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=9a96c9a6&_app_key=4e268421d281dd0f9ab5c56532f44642&requirePictures=true&allowedDiet[]=387&q=#{preferred_veggie}#{choice_simple}#{sweet_savory}") #Insert user params here
+
   end
 
   def self.recipe_skim() #This will skim the response and trim it with more parameters

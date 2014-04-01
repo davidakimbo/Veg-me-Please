@@ -3,12 +3,14 @@
 <head>
   <title>Veg Me Please!</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <link href='http://fonts.googleapis.com/css?family=Londrina+Outline' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<center><h1>Veg Me Please!</h1></center>
+  <div id="container">
+<h1>Veg Me Please!</h1>
 <%= yield %>
-
+</div>
 </body>
 </html>
