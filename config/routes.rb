@@ -4,9 +4,9 @@ get '/recipes' => 'recipes#index'
 get '/recipes/show' => 'recipes#show'
 root to: 'recipes#index'
 
-# get ‘login’, to: ‘sessions#new’
-# get ‘logout’, to: ‘sessions#destroy’
-# post ‘/sessions’, to: ‘sessions#create'
+get '/login', to: 'sessions#new'
+get '/logout', to: 'sessions#destroy'
+post '/sessions', to: 'sessions#create'
 
 # get '/users'
 

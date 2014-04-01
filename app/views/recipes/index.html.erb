@@ -1,3 +1,6 @@
+<% if session[:user_id] != nil %>
+Hi <%= current_user.name %>
+<% end %>
 <form action="/recipes/show" method="get">
   <p>
     <label name="choice_quick">Want to make something quick?<br>
@@ -40,3 +43,6 @@
 
   <input type="submit" name="submit" value="Let's get Cookin'!">
 </form>
+
+<a href="/login">Login</a>
+<a href="/logout">Logout!</a>

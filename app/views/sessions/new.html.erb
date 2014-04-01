@@ -1,6 +1,6 @@
 <h1>Login!</h1>
 
-<%= form_tag sessions_path do %>
+<%= form_tag "/sessions" do %>
   <%= label_tag :email %>
   <%= text_field_tag :email %>
 
@@ -10,11 +10,11 @@
   <%= submit_tag :login %>
 <% end %>
 
-<form action="/sessions" method="post">
+<!-- <form action="/sessions" method="post">
 <label name="email">Login:
   <input type="text" name="email" placeholder="You email address">
 </label>
 |
 <label name="password">
   <input type="password" name="password" placeholder="Your password">
-</label>
+</label> -->

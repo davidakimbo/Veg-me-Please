@@ -7,6 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 david = User.create(name: "David Kim", email: "miniboie@gmail.com", password: "dkrules", password_confirmation: "dkrules")
-p "[User] #{new_user.name} created"
 frank = User.create(name: "Frank Underwood", email: "frank@fakemail.com", password: "frank", password_confirmation: "frank")
-p "[User] #{new_user.name} created"
+
