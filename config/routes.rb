@@ -4,6 +4,12 @@ get '/recipes' => 'recipes#index'
 get '/recipes/show' => 'recipes#show'
 root to: 'recipes#index'
 
+# get ‘login’, to: ‘sessions#new’
+# get ‘logout’, to: ‘sessions#destroy’
+# post ‘/sessions’, to: ‘sessions#create'
+
+# get '/users'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,18 +1,11 @@
 class Recipe < ActiveRecord::Base
 
-  def self.testing_queries
-    #This class method searches for onion soup recipes, returns whats in the matches hash
-    @veg_query = HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=9a96c9a6&_app_key=4e268421d281dd0f9ab5c56532f44642&q=vegetarian+meatballs")
-    return @veg_query["matches"][0]["ingredients"]
-  end
+  def self.recipe_search(choice_quick, sweet_savory, preferred_veggie, allergies)
 
-
-  def self.recipe_search(choice_simple, sweet_savory, preferred_veggie, allergies)
-
-    if choice_simple == "true"
-      choice_simple = "&maxTotalTimeInSeconds=900"
+    if choice_quick == "true"
+      choice_quick = "&maxTotalTimeInSeconds=900"
     else
-      choice_simple = "&maxTotalTimeInSeconds=5400"
+      choice_quick = "&maxTotalTimeInSeconds=5400"
     end
 
     if sweet_savory == "sweet"
@@ -21,28 +14,22 @@ class Recipe < ActiveRecord::Base
       sweet_savory = "&flavor.meaty.min=0.4&flavor.meaty.max=1&"
     end
 
+#     if allergies
+#       allergies.each do |allergy|
+#         # each_allergy2 = each_allergy.join("&allowedAllergy[]=")
+#         puts allergy
+#       end
+# # search_params = params[:search].split(" ").join("+")
+# else
+#  each_allergy = ""
+# end
 
-    if allergies
-      allergies.each do |allergy|
-        allergy.values
-        # each_allergy2 = each_allergy.join("&allowedAllergy[]=")
-        puts allergy
-      end
-# search_params = params[:search].split(" ").join("+")
-else
- each_allergy = ""
-end
-binding.pry
-
-
-    @recipe = HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=9a96c9a6&_app_key=4e268421d281dd0f9ab5c56532f44642&requirePictures=true&allowedDiet[]=387&q=#{preferred_veggie}#{choice_simple}#{sweet_savory}") #Insert user params here
+    @recipe = HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=9a96c9a6&_app_key=4e268421d281dd0f9ab5c56532f44642&requirePictures=true&allowedDiet[]=387&q=#{preferred_veggie}#{choice_quick}#{sweet_savory}") #Insert user params here
 
   end
 
-  def self.recipe_skim() #This will skim the response and trim it with more parameters
-
-
-  end
+  # def self.recipe_skim() #This will skim the response and trim it with more parameters
+  # end
 
 end
 
@@ -55,7 +42,7 @@ end
 
     #This is where the magic happens.
     #Once we get everything the user wants, we pass that shiz here yo!
-    # if choice_simple == "true"
+    # if choice_quick == "true"
     # end
     # params[:sweet_savory]
     # params[:allergies].each do |allergies|
