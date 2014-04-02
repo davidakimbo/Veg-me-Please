@@ -1,5 +1,5 @@
 <% if session[:user_id] != nil %>
-Hi <%= current_user.name %>
+Hi <%= current_user.name %>!
 <% end %>
 <form action="/recipes/show" method="get">
   <p>
@@ -44,5 +44,4 @@ Hi <%= current_user.name %>
   <input type="submit" name="submit" value="Let's get Cookin'!">
 </form>
 
-<a href="/login">Login</a>
-<a href="/logout">Logout!</a>
+<a href="/login">Login</a> | <a href="/logout">Logout!</a> | <a href="/users/new">New here? </a>

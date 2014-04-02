@@ -1,5 +1,5 @@
 class Recipe < ActiveRecord::Base
-
+has_many :ratings
   def self.recipe_search(choice_quick, sweet_savory, preferred_veggie, allergies)
 
     if choice_quick == "true"
@@ -28,8 +28,17 @@ class Recipe < ActiveRecord::Base
 
   end
 
-  # def self.recipe_skim() #This will skim the response and trim it with more parameters
-  # end
+  def self.favorite
+    @recipe = Recipe.create({
+
+
+      })
+
+  end
+
+
+
+
 
 end
 

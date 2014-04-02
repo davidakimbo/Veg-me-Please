@@ -2,13 +2,17 @@ VegMePlease::Application.routes.draw do
 
 get '/recipes' => 'recipes#index'
 get '/recipes/show' => 'recipes#show'
+post '/recipes/favorite' => 'recipes#favorite'
 root to: 'recipes#index'
 
 get '/login', to: 'sessions#new'
 get '/logout', to: 'sessions#destroy'
 post '/sessions', to: 'sessions#create'
 
-# get '/users'
+get '/users/new' => 'users#new'
+post '/users/create' => 'users#create'
+
+resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

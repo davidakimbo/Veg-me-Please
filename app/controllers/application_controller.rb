@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate
     if current_user == nil
-      redirect_to '/recipes#index'
+      redirect_to '/'
     end
   end
 

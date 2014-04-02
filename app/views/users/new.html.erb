@@ -1,27 +1,4 @@
-<form action="/users/create" method="post">
 
-  <label name="name">Enter your name<br>
-    <input type="text" name="name" placeholder="name">
-  </label>
+<%= render 'form' %>
 
-  <br>
-
-  <label name="email">Enter your email<br>
-    <input type="text" name="email" placeholder="email">
-  </label>
-
-  <br>
-
-  <label name="password">Enter your password<br>
-    <input type="password" name="password">
-  </label>
-
-  <br>
-
-  <label name="password_confirmation">Confirm your password<br>
-    <input type="password" name="password_confirmation">
-  </label>
-
-  <br>
-
-</form>
+<%= link_to 'Back', recipes_path %>
