@@ -25,3 +25,5 @@ https://www.dropbox.com/s/1euiz3i05avcq9h/Project-%20Veg%20Me%20Please%20-%20New
 
 ####Pivotal Tracker:
 https://www.pivotaltracker.com/s/projects/1047544
+
+note 4/3/2014: I was having issues with the API this evening. Though my code was correct, the API did not recognize any additional parameters to the search call. Chuck and Ilana can vouch for this problem
