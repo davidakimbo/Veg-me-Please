@@ -13,9 +13,8 @@ has_many :ratings
     else
       sweet_savory = "&flavor.meaty.min=0.4&flavor.meaty.max=1"
     end
-    binding.pry
     @recipe = HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=9a96c9a6&_app_key=4e268421d281dd0f9ab5c56532f44642&requirePictures=true&allowedDiet[]=387&q=#{preferred_veggie}#{choice_quick}#{sweet_savory}") #Insert user params here
-    binding.pry
+
   end
 
   # def self.favorite

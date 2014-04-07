@@ -1,0 +1,25 @@
+{
+  "name": "veg_me_please",
+  "version": "0.0.1",
+  "description": "Vegetarian App. Alpha build",
+  "main": "index.html.erb",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davidakimbo/project1.git"
+  },
+  "author": "David Kim",
+  "license": "NA",
+  "bugs": {
+    "url": "https://github.com/davidakimbo/project1/issues"
+  },
+  "homepage": "https://github.com/davidakimbo/project1",
+  "dependencies": {
+    "express": "^3.5.1"
+  }
+}
