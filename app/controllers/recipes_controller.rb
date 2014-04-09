@@ -10,12 +10,10 @@ class RecipesController < ApplicationController
       allergies = params[:allergies]
       @user = current_user
       @results = Recipe.recipe_search(choice_quick, sweet_savory, preferred_veggie, allergies)
-
   end
 
   def favorite
     @user = current_user
-
     new_favorite = Recipe.create({
         :name => params[:name],
         :url => params[:url],
