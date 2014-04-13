@@ -22,6 +22,7 @@ class Recipe < ActiveRecord::Base
     recipe_call(choice_quick, sweet_savory, preferred_veggie)
    end
 
+
   end
 
   def self.recipe_call(choice_quick, sweet_savory, preferred_veggie)
@@ -29,12 +30,12 @@ class Recipe < ActiveRecord::Base
   end
 
 
-  def self.favorite
-    @recipe = Recipe.create({
+  # def self.favorite
+  #   @recipe = Recipe.create({
 
-      })
+  #     })
 
-  end
+  # end
 
 end
 

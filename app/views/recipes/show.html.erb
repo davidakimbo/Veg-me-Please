@@ -6,6 +6,7 @@
   <% end %>
   <img src="<%= @results["matches"][0]["imageUrlsBySize"]["90"]%>" class="results"></p>
 
+<<<<<<< HEAD
   <% if current_user %>
   <% form_for @recipes url: {action: "recipes/favorite"} %>
   <% hidden_field_tag(:name, @results["matches"][0]["recipeName"]) %>
@@ -14,6 +15,8 @@
   <%= submit "fave it!" %>
     <% else %>
   <% end %>
+=======
+>>>>>>> parent of 138eb6e... Beginning on favoriting recipes
 <br>
 
 <p><a href="http://www.yummly.com/recipe/<%=@results["matches"][1]["id"]%>"><h2><%= @results["matches"][1]["recipeName"] %></a></h2>
