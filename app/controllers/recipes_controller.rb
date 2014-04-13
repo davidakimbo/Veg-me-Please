@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
       name: => params[:name],
       url: => params[:url],
       img_url: => params[:img_url],
-      user_id: => current_user
+      # user_id: => current_user
       })
   end
 
