@@ -6,6 +6,14 @@
   <% end %>
   <img src="<%= @results["matches"][0]["imageUrlsBySize"]["90"]%>" class="results"></p>
 
+  <% if current_user %>
+  <% form_for @recipes url: {action: "favorite"} %>
+  <% f.hidden_field_tag(:name, @results["matches"][0]["recipeName"]) %>
+  <% f.hidden_field_tag(:url, @results["matches"][0]["id"]) %>
+  <% f.hidden_field_tag(:img_url, @results["matches"][0]["imageUrlsBySize"]) %>
+  <%= f.submit "fave it!" %>
+    <% else %>
+  <% end %>
 <br>
 
 <p><a href="http://www.yummly.com/recipe/<%=@results["matches"][1]["id"]%>"><h2><%= @results["matches"][1]["recipeName"] %></a></h2>

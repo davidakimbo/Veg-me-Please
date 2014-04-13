@@ -1,6 +1,6 @@
 VegMePlease::Application.routes.draw do
 
-root 'welcome#index'
+root 'welcome#index'  # TODO change to recipes path.
 
 get '/recipes' => 'recipes#index'
 get '/recipes/show' => 'recipes#show'
@@ -13,8 +13,9 @@ post '/sessions', to: 'sessions#create'
 get '/users/new' => 'users#new'
 post '/users/create' => 'users#create'
 
-resources :users
-
+resources :users do
+  resources :recipes
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
