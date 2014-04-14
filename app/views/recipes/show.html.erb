@@ -1,0 +1,28 @@
+<p><a href="http://www.yummly.com/recipes/<%= @results["matches"][0]["id"] %>"><h2><%= @results["matches"][0]["recipeName"]  %></a></h2>
+  <%@results["matches"][0]["ingredients"].each do |ingredient|%>
+  <ul>
+    <li><%=ingredient %></li>
+  </ul>
+  <% end %>
+  <img src="<%= @results["matches"][0]["imageUrlsBySize"]["90"]%>" class="results"></p>
+
+<br>
+
+<p><a href="http://www.yummly.com/recipe/<%=@results["matches"][1]["id"]%>"><h2><%= @results["matches"][1]["recipeName"] %></a></h2>
+  <%@results["matches"][1]["ingredients"].each do |ingredient|%>
+  <ul>
+    <li><%=ingredient %></li>
+  </ul>
+  <% end %>
+  <img src="<%= @results["matches"][1]["imageUrlsBySize"]["90"]%>" class="results"></p>
+
+<br>
+
+<p><a href="http://www.yummly.com/recipe/<%=@results["matches"][2]["id"]%>"><h2><%= @results["matches"][2]["recipeName"] %></a></h2>
+  <%@results["matches"][2]["ingredients"].each do |ingredient|%>
+  <ul>
+    <li><%=ingredient %></li>
+  </ul>
+  <% end %>
+  <img src="<%= @results["matches"][2]["imageUrlsBySize"]["90"]%>" class="results"></p>
+
