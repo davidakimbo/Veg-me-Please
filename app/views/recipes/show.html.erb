@@ -1,4 +1,4 @@
-<p><a href="http://www.yummly.com/recipes/<%= @results["matches"][0]["id"] %>"><h2><%= @results["matches"][0]["recipeName"]  %></a></h2>
+<p><a href="http://www.yummly.com/recipes/<%= @results["matches"][0]["id"] %>"><h2><%= @results["matches"][0]["recipeName"]  %></h2></a>
   <%@results["matches"][0]["ingredients"].each do |ingredient|%>
   <ul>
     <li><%=ingredient %></li>
@@ -8,7 +8,7 @@
 
 <br>
 
-<p><a href="http://www.yummly.com/recipe/<%=@results["matches"][1]["id"]%>"><h2><%= @results["matches"][1]["recipeName"] %></a></h2>
+<p><a href="http://www.yummly.com/recipe/<%=@results["matches"][1]["id"]%>"><h2><%= @results["matches"][1]["recipeName"] %></h2></a>
   <%@results["matches"][1]["ingredients"].each do |ingredient|%>
   <ul>
     <li><%=ingredient %></li>
@@ -18,7 +18,7 @@
 
 <br>
 
-<p><a href="http://www.yummly.com/recipe/<%=@results["matches"][2]["id"]%>"><h2><%= @results["matches"][2]["recipeName"] %></a></h2>
+<p><a href="http://www.yummly.com/recipe/<%=@results["matches"][2]["id"]%>"><h2><%= @results["matches"][2]["recipeName"] %></h2></a>
   <%@results["matches"][2]["ingredients"].each do |ingredient|%>
   <ul>
     <li><%=ingredient %></li>

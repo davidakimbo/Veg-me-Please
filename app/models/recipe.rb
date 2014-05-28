@@ -16,7 +16,7 @@ class Recipe < ActiveRecord::Base
     end
 
     if choice_protein == "yes"
-      choice_protein = "nutrition.PROCNT.min=15"
+      choice_protein = "nutrition.PROCNT.min=7"
     else
       choice_protein = "nutrition.PROCNT.min=0"
     end
