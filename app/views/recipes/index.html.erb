@@ -1,4 +1,4 @@
-<% if session[:user_id] != nil %>
+<% if session[:user_id] %>
 Hi <%= current_user.name %>!
 <% end %>
 <form action="/recipes/show" method="get">

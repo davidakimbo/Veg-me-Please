@@ -8,19 +8,20 @@ class RecipesController < ApplicationController
       choice_quick = params[:choice_quick]
       sweet_savory = params[:sweet_savory]
       preferred_veggie = params[:preferred_veggie]
+      choice_protein = params[:choice_protein]
       allergies = params[:allergies]
 
-      @results = Recipe.recipe_search(choice_quick, sweet_savory, preferred_veggie, allergies)
+      @results = Recipe.recipe_search(choice_quick, sweet_savory, preferred_veggie, choice_protein,allergies)
 
   end
 
-  def favorite
-    @user = current_user
-    new_favorite = Recipe.create({
-        :name => params[:name],
-        :url => params[:url],
-        :img_url => params[:img_url]
-      })
+  # def favorite
+  #   @user = current_user
+  #   new_favorite = Recipe.create({
+  #       :name => params[:name],
+  #       :url => params[:url],
+  #       :img_url => params[:img_url]
+  #     })
 
-  end
+  # end
 end

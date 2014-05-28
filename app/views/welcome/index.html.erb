@@ -1,4 +1,4 @@
-<% if session[:user_id] != nil %>
+<% if session[:user_id] %>
 Hi <%= current_user.name %>!
 <% end %>
 <form action="/recipes/show" method="get">
@@ -23,6 +23,15 @@ Hi <%= current_user.name %>!
   <p>
     <label name="preferred_veggie">What veggy do you enjoy?<br>
       <input type="text" name="preferred_veggie">
+    </label>
+  </p>
+
+  <p>
+    <label name="choice_protein">Would you like MORE PROTEIN!?<br>
+      <input type="radio" name="choice_protein" value="yes"> Yes!
+    </label>
+    <label name="choice_protein">
+      <input type="radio" name="choice_protein" value="no" checked>Nah
     </label>
   </p>
 
