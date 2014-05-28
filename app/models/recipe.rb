@@ -17,7 +17,7 @@ class Recipe < ActiveRecord::Base
 
     if allergies
      allergy = allergies.values.join
-     HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=9a96c9a6&_app_key=4e268421d281dd0f9ab5c56532f44642&requirePictures=true&q=#{preferred_veggie}&maxTotalTimeInSeconds=#{choice_quick}#{sweet_savory}#{allergy}")
+     HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=9a96c9a6&_app_key=4e268421d281dd0f9ab5c56532f44642&requirePictures=true&q=#{preferred_veggie}&maxTotalTimeInSeconds=#{choice_quick}#{sweet_savory}&#{allergy}")
    else
     recipe_call(choice_quick, sweet_savory, preferred_veggie)
    end
@@ -26,7 +26,7 @@ class Recipe < ActiveRecord::Base
   end
 
   def self.recipe_call(choice_quick, sweet_savory, preferred_veggie)
-    @recipe = HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=9a96c9a6&_app_key=4e268421d281dd0f9ab5c56532f44642&requirePictures=true&allowedDiet[]=387&q=#{preferred_veggie}&maxTotalTimeInSeconds=#{choice_quick}#{sweet_savory}")
+    @recipe = HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=#{ENV["API_ID"]}&_app_key=#{ENV["API_KEY"]}&requirePictures=true&q=#{preferred_veggie}&maxTotalTimeInSeconds=#{choice_quick}#{sweet_savory}" + '&allowedDiet[]=387^Lacto-ovo vegetarian')
   end
 
 
