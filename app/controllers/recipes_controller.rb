@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
       choice_protein = params[:choice_protein]
       allergies = params[:allergies]
 
-      @results = Recipe.recipe_search(choice_quick, sweet_savory, preferred_veggie, choice_protein,allergies)
+      @results = Recipe.recipe_search(choice_quick, sweet_savory, preferred_veggie, choice_protein, allergies)
 
   end
 

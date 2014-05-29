@@ -23,25 +23,12 @@ class Recipe < ActiveRecord::Base
 
     if allergies
      allergy = allergies.values.join
-     HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=#{ENV["API_ID"]}&_app_key=#{ENV["API_KEY"]}&requirePictures=true&q=#{preferred_veggie}&maxTotalTimeInSeconds=#{choice_quick}&#{sweet_savory}&#{choice_protein}&#{allergy}")
-   else
-    recipe_call(choice_quick, sweet_savory, choice_protein, preferred_veggie)
-   end
-
+      HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=#{ENV["API_ID"]}&_app_key=#{ENV["API_KEY"]}&requirePictures=true&q=#{preferred_veggie}&maxTotalTimeInSeconds=#{choice_quick}&#{sweet_savory}&#{choice_protein}#{allergy}")
+    else
+      HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=#{ENV["API_ID"]}&_app_key=#{ENV["API_KEY"]}&requirePictures=true&q=#{preferred_veggie}&maxTotalTimeInSeconds=#{choice_quick}&#{sweet_savory}&#{choice_protein}")
+    end
 
   end
-
-  def self.recipe_call(choice_quick, sweet_savory, choice_protein, preferred_veggie)
-    @recipe = HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=#{ENV["API_ID"]}&_app_key=#{ENV["API_KEY"]}&requirePictures=true&q=#{preferred_veggie}&maxTotalTimeInSeconds=#{choice_quick}&#{sweet_savory}&#{choice_protein}")
-  end
-
-
-  # def self.favorite
-  #   @recipe = Recipe.create({
-
-  #     })
-
-  # end
 
 end
 
