@@ -1,5 +1,5 @@
 class Recipe < ActiveRecord::Base
-  has_many :ratings
+
 
   def self.recipe_search(choice_quick, sweet_savory, preferred_veggie, choice_protein, allergies)
 

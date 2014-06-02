@@ -1,10 +1,7 @@
 VegMePlease::Application.routes.draw do
 
-root 'welcome#index'
-
+root 'recipes#search'
 get '/recipes' => 'recipes#index'
-get '/recipes/show' => 'recipes#show'
-post '/recipes/favorite' => 'recipes#favorite'
 
 get '/login', to: 'sessions#new'
 get '/logout', to: 'sessions#destroy'
