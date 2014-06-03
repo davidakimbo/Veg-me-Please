@@ -9,7 +9,5 @@ class AddRecipeUsersRemoveRatings < ActiveRecord::Migration
       t.string :last_name
     end
 
-    drop_table :ratings
-
   end
 end

@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :recipe_users
-  has_many :recipes, :through => :recipes_users
+  has_many :favorites
+  has_many :users, :through => :favorites
 
   validates :email, presence: true, uniqueness: true
   has_secure_password

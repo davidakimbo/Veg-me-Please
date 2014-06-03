@@ -14,13 +14,17 @@ class RecipesController < ApplicationController
   def search #Not much to see here
   end
 
-  def create #
+  def create #Saving recipes to the database / Users account
     @user = current_user
     @recipe = Recipe.create(name: params[:name], url: params[:url], img_url: params[:img_url])
-    @recipe_user = RecipeUser.create(recipe_id: @recipe.id, user_id: @user.id)
-    redirect_to '/index'
+    @favorite = Favorite.create(recipe_id: @recipe.id, user_id: @user.id)
+    redirect_to '/'
   end
 
+  def destroy #Removing recipes saved in the users account
+
+
+  end
 
 
 end

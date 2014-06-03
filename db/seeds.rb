@@ -8,4 +8,4 @@
 
 david = User.create(first_name: "David", last_name: "Kim", email: "miniboie@gmail.com", password: "dkrules", password_confirmation: "dkrules")
 frank = User.create(first_name: "Frank", last_name: "Underwood", email: "frank@fakemail.com", password: "frank", password_confirmation: "frank")
-
+dude = User.create(first_name: "dude", last_name: "Underwood", email: "dude@fakemail.com", password: "dude", password_confirmation: "dude")
