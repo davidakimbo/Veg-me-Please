@@ -14,7 +14,10 @@ class RecipesController < ApplicationController
   def search
   end
 
-  def show
+  def create
+    @user = current_user
+    @recipe = Recipe.create(params)
+    redirect_to '/index'
   end
 
 end

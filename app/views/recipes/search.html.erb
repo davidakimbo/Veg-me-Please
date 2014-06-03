@@ -1,5 +1,5 @@
 <% if session[:user_id] %>
-Hi <%= current_user.name %>!
+Hi <%= current_user.first_name %>!
 <% end %>
 <form action="/recipes" method="get">
   <p>

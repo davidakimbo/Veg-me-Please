@@ -12,18 +12,6 @@
  *= require_tree .
  */
 
-
-#container {width: 1000px;
-            padding: 10px;
-            margin: 0 auto;
-            }
-
-#header {
-  background: url('header_bg.jpg') no-repeat center center fixed;
-  width: 100%;
-  height: 200px;
-}
-
 h1 {
     text-align: center;
     font: 4em bold 'Oswald', sans-serif;
@@ -40,6 +28,7 @@ body {
   color: white;
   text-shadow: 1px 1px 1px #000;
      }
+
 a {
   color: orange;
 }
@@ -48,7 +37,16 @@ input[type=text] {
   color: black;
 }
 
-/* Make custom color for form input text*/
+#container {width: 1000px;
+            padding: 10px;
+            margin: 0 auto;
+            }
+
+#header {
+  background: url('header_bg.jpg') no-repeat center center fixed;
+  width: 100%;
+  height: 200px;
+}
 
 .results img {float: left}
 

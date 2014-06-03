@@ -1,7 +1,7 @@
 class Recipe < ActiveRecord::Base
 
 has_many :recipe_users
-has_many :users through :recipe_users
+has_many :users, :through => :recipe_users
 
   def self.recipe_search(choice_quick, sweet_savory, preferred_veggie, choice_protein, allergies)
 
