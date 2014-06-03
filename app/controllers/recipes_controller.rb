@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
 
-  def index
+  def index #Displays the query results
      @user = current_user
       choice_quick = params[:choice_quick]
       sweet_savory = params[:sweet_savory]
@@ -11,13 +11,16 @@ class RecipesController < ApplicationController
       @results = Recipe.recipe_search(choice_quick, sweet_savory, preferred_veggie, choice_protein, allergies)
   end
 
-  def search
+  def search #Not much to see here
   end
 
-  def create
+  def create #
     @user = current_user
-    @recipe = Recipe.create(params)
+    @recipe = Recipe.create(name: params[:name], url: params[:url], img_url: params[:img_url])
+    @recipe_user = RecipeUser.create(recipe_id: @recipe.id, user_id: @user.id)
     redirect_to '/index'
   end
+
+
 
 end
