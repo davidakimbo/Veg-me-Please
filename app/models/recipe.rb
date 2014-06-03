@@ -1,5 +1,7 @@
 class Recipe < ActiveRecord::Base
 
+has_many :recipe_users
+has_many :users through :recipe_users
 
   def self.recipe_search(choice_quick, sweet_savory, preferred_veggie, choice_protein, allergies)
 
@@ -22,7 +24,7 @@ class Recipe < ActiveRecord::Base
     end
 
     if allergies
-     allergy = allergies.values.join
+     allergy = allergies.values.join.chomp
       HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=#{ENV["API_ID"]}&_app_key=#{ENV["API_KEY"]}&requirePictures=true&q=#{preferred_veggie}&maxTotalTimeInSeconds=#{choice_quick}&#{sweet_savory}&#{choice_protein}#{allergy}")
     else
       HTTParty.get("http://api.yummly.com/v1/api/recipes?_app_id=#{ENV["API_ID"]}&_app_key=#{ENV["API_KEY"]}&requirePictures=true&q=#{preferred_veggie}&maxTotalTimeInSeconds=#{choice_quick}&#{sweet_savory}&#{choice_protein}")

@@ -7,21 +7,53 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *
+ *= require normalize
  *= require_self
  *= require_tree .
  */
+
+
 #container {width: 1000px;
-            margin: 0 auto}
+            padding: 10px;
+            margin: 0 auto;
+            }
 
-h1 {text-align: center;
-    font-family: 'Londrina Outline', cursive;
-    font-size: 3em;
-    font-weight: bold;
-    background: green;
-    color: white}
+#header {
+  background: url('header_bg.jpg') no-repeat center center fixed;
+  width: 100%;
+  height: 200px;
+}
 
-body {font-family: sans-serif;
-      font-size: 1em}
+h1 {
+    text-align: center;
+    font: 4em bold 'Oswald', sans-serif;
+    color: white;
+    margin: 0px;
+    padding: 50px;
+    text-shadow: 3px 3px 3px #333;
+   }
+
+body {
+  font-family: 'Bitter', serif;
+  font-size: 1em;
+  background: #005C12;
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+     }
+a {
+  color: orange;
+}
+
+input[type=text] {
+  color: black;
+}
+
+/* Make custom color for form input text*/
 
 .results img {float: left}
+
+.shadow {
+   -moz-box-shadow:    inset 0 -30px 100px #000000;
+   -webkit-box-shadow: inset 0 -30px 100px #000000;
+   box-shadow:         inset 0 -30px 100px #000000;
+        }
