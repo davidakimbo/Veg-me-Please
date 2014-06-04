@@ -10,6 +10,7 @@ post '/sessions', to: 'sessions#create'
 
 get '/users/new' => 'users#new'
 post '/users/create' => 'users#create'
+get '/favorites' => 'users#index'
 
 resources :users
 

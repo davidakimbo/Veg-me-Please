@@ -18,7 +18,7 @@ class RecipesController < ApplicationController
     @user = current_user
     @recipe = Recipe.create(name: params[:name], url: params[:url], img_url: params[:img_url])
     @favorite = Favorite.create(recipe_id: @recipe.id, user_id: @user.id)
-    redirect_to '/'
+    redirect_to '/favorites'
   end
 
   def destroy #Removing recipes saved in the users account

@@ -1,0 +1,9 @@
+<% @favorites.each do |favorite| %>
+
+<ul>
+<li><a href="http://www.yummly.com/recipes/<%= favorite.recipe.url %>"><%= favorite.recipe.name %></a>
+
+<img src="<%= favorite.recipe.img_url %>">
+</li>
+</ul>
+<% end %>
