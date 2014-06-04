@@ -1,9 +1,10 @@
+<h2><%= @user.first_name %>'s faves!</h2>
+
 <% @favorites.each do |favorite| %>
+  <ul>
+    <li><a href="http://www.yummly.com/recipe/<%= favorite.recipe.url %>"><%= favorite.recipe.name %></a>
+    <img src="<%= favorite.recipe.img_url %>">
+    </li>
+  </ul>
 
-<ul>
-<li><a href="http://www.yummly.com/recipes/<%= favorite.recipe.url %>"><%= favorite.recipe.name %></a>
-
-<img src="<%= favorite.recipe.img_url %>">
-</li>
-</ul>
 <% end %>

@@ -1,4 +1,4 @@
-  <p><a href="http://www.yummly.com/recipes/<%= @results["matches"][0]["id"] %>"><h2><%= @results["matches"][0]["recipeName"]  %></h2></a>
+  <p><a href="http://www.yummly.com/recipe/<%= @results["matches"][0]["id"] %>"><h2><%= @results["matches"][0]["recipeName"]  %></h2></a>
     <ul>
     <%@results["matches"][0]["ingredients"].each do |ingredient|%>
 
