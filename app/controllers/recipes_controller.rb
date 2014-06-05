@@ -22,8 +22,9 @@ class RecipesController < ApplicationController
   end
 
   def destroy #Removing recipes saved in the users account
-
-
+    @favorite = Favorite.find(params[:recipe_id])
+    @favorite.destroy
+    redirect_to '/favorites'
   end
 
 
