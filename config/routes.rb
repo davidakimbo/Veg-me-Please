@@ -3,6 +3,7 @@ VegMePlease::Application.routes.draw do
 root 'recipes#search'
 get '/recipes' => 'recipes#index'
 post '/create' => 'recipes#create'
+post '/destroy' => 'recipes#destroy'
 
 get '/login', to: 'sessions#new'
 get '/logout', to: 'sessions#destroy'

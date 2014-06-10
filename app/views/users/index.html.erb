@@ -4,6 +4,10 @@
   <ul>
     <li><a href="http://www.yummly.com/recipe/<%= favorite.recipe.url %>"><%= favorite.recipe.name %></a>
     <img src="<%= favorite.recipe.img_url %>">
+    <%= form_tag('/destroy', method: "post") do %>
+    <%= hidden_field_tag("recipe_id", favorite.recipe.id) %>
+    <%= submit_tag("Remove Recipe") %>
+    <% end %>
     </li>
   </ul>
 
