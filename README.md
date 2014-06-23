@@ -25,6 +25,3 @@ https://www.dropbox.com/s/1euiz3i05avcq9h/Project-%20Veg%20Me%20Please%20-%20New
 
 ####Pivotal Tracker:
 https://www.pivotaltracker.com/s/projects/1047544
-
-####4/7/2014
-Could not get around to refactoring code or finishing People app. Was preoccupied and did not get around to it as I could have.
